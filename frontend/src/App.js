@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-const API_BASE_URL = "http://localhost:5000/api"; // Backend URL
+const API_BASE_URL = "http://localhost:5000/api";
 
 function App() {
   const [city, setCity] = useState("");
@@ -22,11 +22,9 @@ function App() {
       setWeather(null);
       setForecast(null);
 
-      // Fetch current weather
       const weatherRes = await axios.get(`${API_BASE_URL}/weather?city=${city}`);
       setWeather(weatherRes.data);
 
-      // Fetch forecast
       const forecastRes = await axios.get(`${API_BASE_URL}/forecast?city=${city}`);
       setForecast(forecastRes.data);
     } catch (err) {
