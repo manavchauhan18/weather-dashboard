@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-const API_BASE_URL = "https://weather-dashboard-8e4r.onrender.com";
+const API_BASE_URL = "https://weather-dashboard-8e4r.onrender.com/api";
 
 function App() {
   const [city, setCity] = useState("");
